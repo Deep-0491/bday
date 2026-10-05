@@ -1,0 +1,105 @@
+:root {
+  --primary-pink: #ffd6e8;
+  --secondary-pink: #f9b4cf;
+  --accent-pink: #ff85b3;
+  --text-dark: #5c404c;
+  --text-light: #ffffff;
+  --bg-gradient: linear-gradient(135deg, #fff0f5 0%, #ffcce6 100%);
+  --btn-red: #ff5757;
+  --btn-red-shadow: #cc0000;
+  --btn-green: #37d67a;
+  --btn-green-shadow: #219653;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', 'Fredoka One', 'Quicksand', sans-serif;
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-dark);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-base {
+  border: none;
+  border-radius: 99px;
+  padding: clamp(10px, 4vw, 12px) clamp(24px, 6vw, 32px);
+  font-family: inherit;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-weight: 900;
+  color: white;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 0 6px 0px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s;
+  -webkit-text-stroke: 1px white;
+}
+
+.button-base:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.btn-yes {
+  background: var(--btn-green);
+  border: 4px solid var(--text-light);
+  color: white;
+  -webkit-text-stroke: 1px #219653;
+}
+
+.btn-no {
+  background: var(--btn-red);
+  border: 4px solid var(--text-light);
+  color: white;
+  -webkit-text-stroke: 1px #cc0000;
+}
+
+.title-text {
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
+  font-weight: 900;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(255, 133, 179, 0.3);
+}
+
+.banner-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4.5rem, 15vw, 12rem);
+  margin: 0;
+  color: #f5f5dc;
+  line-height: 0.9;
+  letter-spacing: -2px;
+}
+
+/* Scrapbook styling */
+.scrapbook-container {
+  background: white;
+  width: 90vw;
+  max-width: 800px;
+  min-height: 60vh;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: clamp(20px, 5vw, 40px);
+  position: relative;
+  background-image: repeating-linear-gradient(white, white 30px, #f2f2f2 31px, #f2f2f2 31px);
+  border-left: 2px solid pink;
+}
